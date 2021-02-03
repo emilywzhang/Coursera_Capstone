@@ -25,12 +25,12 @@ When looking for an apartment, there are numerous factors to consider, such as a
 * Average Income as column "Income"
 
 > Here is a sample of the dataframe table.
-![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/1.jpg)
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/1.jpg)*Fig. 1*
 
 ### 2. Coordinates Data from GeoPy 
 > For each neighbourhood of Montreal, we gather the geographical coordinates using the Nominatim API from *geopy.geoencoders*.
 > Here is a sample of the dataframe table.
-![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/2.jpg)
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/2.jpg)*Fig. 2*
 
 ### 3. GeoJSON File for Montreal Boroughs
 > A GeoJSON file for the neighbourhoods in Montreal, obtained from the city of Montreal government database: [Limite administrative de l'agglomération de Montréal (Arrondissements et Villes liées)](https://donnees.montreal.ca/ville-de-montreal/polygones-arrondissements)
@@ -43,14 +43,19 @@ When looking for an apartment, there are numerous factors to consider, such as a
 * Grocery store ID: 4bf58dd8d48988d118951735
 * Park ID: 4bf58dd8d48988d163941735
 * Restaurant(Food) ID: 4d4b7105d754a06374d81259
-> We can visualize the map of Montreal with each neighbourhood marked out using Folium.
-![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/3.jpg)
 
+
+***
 
 
 # Methodology
 
-### Visualization of the geographical distributions
+* First, we performed data cleaning on the aforementioned datasets in step 1 and 2. The resulting dataframe contains: Neighbourhood, Latitude, Longitude, Population Density, Number of Rental Properties, Average Income. Then, we will utilize the FourSquare API to obtain information on the venues. In particular, we are interested in Restaurants, Grocery Stores, Parks and Metro Stations, because first of all, university students usually don't own cars, so they need to live close enough to public transit stations and grocery stores; second, many of them get busy during exam seasons and don't have time to cook, so delivery and take-out from restaurants are usually very helpful; third, everyone loves nature, and university students need to find ways to relax and forget about the stress from their assignments, exams, presentations, quizzes, group projects etc..... So having parks nearby is definitely a plus! With these ideas in mind, we can perform exploratory data analysis to visualize the locations of those important venues on the map of Montreal.
+* Second, we will perform k-means clustering to devide the neighbourhoods into clusters based on the columns that we have identified.
+* From the clustering result, we can visualize patterns in each cluster in terms of average population density, average income and average number of rental properties. This will also help us compare the clustered neighbourhoods.
+
+
+# Results
 
 > We can generate a map of Montreal with partitions of neighbourhoods, using the GeoJSON file that we obtained from the city of Montreal website. Then, we will first focus on visualizing the four important categories of venues on the map. Using the Folium library, we can add the four types of markers to the map, as shown below.
 ![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/4.jpg)
@@ -59,4 +64,7 @@ When looking for an apartment, there are numerous factors to consider, such as a
 * Purple: Grocery stores
 * Yellow: Metro stations
 
+
+
+From the above graph, we can conclude that neither the north nor the west part are good places for students to live, mainly due to the lack of metro stations to commute to the universities downtown, and the locations for grocery stores and restaurants are also too sparse.
 
