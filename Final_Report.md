@@ -32,8 +32,12 @@ When looking for an apartment, there are numerous factors to consider, such as a
 > Here is a sample of the dataframe table.
 ![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/2.jpg)
 
+### 3. GeoJSON File for Montreal Boroughs
+> A GeoJSON file for the neighbourhoods in Montreal, obtained from the city of Montreal government database: [Limite administrative de l'agglomération de Montréal (Arrondissements et Villes liées)](https://donnees.montreal.ca/ville-de-montreal/polygones-arrondissements)
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/4.jpg)
 
-### 3. Venue Data from Foursquare API
+
+### 4. Venue Data from Foursquare API
 > From their collection of venue data, we will gather information on grocery stores, metro stations, restaurants and parks in Montreal. The following are the IDs retrieved from Foursquare API [Documentation](https://developer.foursquare.com/docs/build-with-foursquare/categories/), for the venue categories we are interested in.
 * Metro station ID: 4bf58dd8d48988d1fd931735
 * Grocery store ID: 4bf58dd8d48988d118951735
