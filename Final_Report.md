@@ -34,7 +34,7 @@ When looking for an apartment, there are numerous factors to consider, such as a
 
 ### 3. GeoJSON File for Montreal Boroughs
 > A GeoJSON file for the neighbourhoods in Montreal, obtained from the city of Montreal government database: [Limite administrative de l'agglomération de Montréal (Arrondissements et Villes liées)](https://donnees.montreal.ca/ville-de-montreal/polygones-arrondissements)
-![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/5.jpg)
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/5.jpg)*Fig. 3*
 
 
 ### 4. Venue Data from Foursquare API
@@ -58,7 +58,7 @@ When looking for an apartment, there are numerous factors to consider, such as a
 # Results
 
 > We can generate a map of Montreal with partitions of neighbourhoods, using the GeoJSON file that we obtained from the city of Montreal website. Then, we will first focus on visualizing the four important categories of venues on the map. Using the Folium library, we can add the four types of markers to the map, as shown below.
-![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/4.jpg)
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/4.jpg)*Fig. 4*
 * Orange: Parks
 * Dark green: Restaurants
 * Purple: Grocery stores
@@ -66,5 +66,7 @@ When looking for an apartment, there are numerous factors to consider, such as a
 
 
 
-From the above graph, we can conclude that neither the north nor the west part are good places for students to live, mainly due to the lack of metro stations to commute to the universities downtown, and the locations for grocery stores and restaurants are also too sparse.
+
+
+From the above Fig. 4, we can conclude that neither the north nor the west part are good places for students to live, mainly due to the lack of metro stations to commute to the universities downtown, and the locations for grocery stores and restaurants are also too sparse.
 
