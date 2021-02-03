@@ -57,16 +57,29 @@ When looking for an apartment, there are numerous factors to consider, such as a
 
 # Results
 
-> We can generate a map of Montreal with partitions of neighbourhoods, using the GeoJSON file that we obtained from the city of Montreal website. Then, we will first focus on visualizing the four important categories of venues on the map. Using the Folium library, we can add the four types of markers to the map, as shown below.
+We can generate a map of Montreal with partitions of neighbourhoods, using the GeoJSON file that we obtained from the city of Montreal website. Then, we will first focus on visualizing the four important categories of venues on the map. Using the Folium library, we can add the four types of markers to the map, as shown below.
 ![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/4.jpg)*Fig. 4*
 * Orange: Parks
 * Dark green: Restaurants
 * Purple: Grocery stores
 * Yellow: Metro stations
 
+Now, we perform k-means clustering and divide the neighbourhoods into 5 clusters. The resulting dataframe is shown below.
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/8.jpg)*Fig. 5*
+
+Now, we plot the neighbourhoods on the map, with different colors indicating different clusters.
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/7.jpg)*Fig. 6*
+
+Finally, we will visualize the average population density, average income and average number of rental properties for each cluster. The three plots generated are shown below.
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/9.jpg)*Fig. 7*
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/10.jpg)*Fig. 8*
+![image](https://github.com/emilywzhang/Coursera_Capstone/blob/main/11.jpg)*Fig. 9*
 
 
+# Discussion
 
+By examining the dataframe produced from FourSquare, we notice that the avialable data on locations are not as abundant and accurate as other metropolitan cities we have studied like Toronto and San Francisco. For example, the total number of metro stations returned by the FourSquare API is only 13, while in reality Montreal has 4 lines of metro with 68 stations. It is possible that some location names are in French and are not included in the FourSquare database. Apart from that, the overall result is consistent with the geographical distributions in Montreal.
 
-From the above Fig. 4, we can conclude that neither the north nor the west part are good places for students to live, mainly due to the lack of metro stations to commute to the universities downtown, and the locations for grocery stores and restaurants are also too sparse.
+# Conclusion
 
+From the above Fig. 4, we can conclude that neither the north nor the west part are good places for students to live, mainly due to the lack of metro stations to commute to the universities downtown, and the locations for grocery stores and restaurants are also too sparse. But again, it might be because of the incomplete dataset from FourSquare. Upon examining Fig. 7,8,9, we can conclude that neighbourhoods in Cluster 4 might be more suitable in terms of the availability of rental properties. It also has the highest average population density, which means it is possibly closer to downtown and has easier access to various venues. Overall, it is more likely that neighbourhoods in Cluster 4 (light orange circles in Fig. 6) are suitable for university students. 
